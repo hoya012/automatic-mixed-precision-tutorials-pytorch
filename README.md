@@ -43,6 +43,32 @@ python main.py --checkpoint_name baseline;
 
 ### 2. Automatic Mixed Precision Training 
 
+In PyTorch 1.6, Automatic Mixed Precision Training is very easy to use! Thanks to PyTorch..
+
+```python
+""" define loss scaler for automatic mixed precision """
+scaler = torch.cuda.amp.GradScaler()
+
+for batch_idx, (inputs, labels) in enumerate(data_loader):
+  self.optimizer.zero_grad()
+
+  with torch.cuda.amp.autocast():
+    outputs = self.model(inputs)
+    loss = self.criterion(outputs, labels)
+
+  # Scales the loss, and calls backward() 
+  # to create scaled gradients 
+  self.scaler.scale(loss).backward()
+
+  # Unscales gradients and calls 
+  # or skips optimizer.step() 
+  self.scaler.step(self.optimizer)
+
+  # Updates the scale for next iteration 
+  self.scaler.update()
+```
+
+#### Run Script (Command Line)
 ```python
 python main.py --checkpoint_name baseline_amp --amp;
 ```
@@ -55,7 +81,7 @@ python main.py --checkpoint_name baseline_amp --amp;
 |:------------:|:-------------:|:--------------:|:-------------------:|
 |  B - 1080 Ti |      xx.xx    |     10737MB    |         xx.xx       |    
 |  B - 2080 Ti |      xx.xx    |      xx.xx     |         xx.xx       |    
-| AMP - 1080 Ti|      xx.xx    |      xx.xx     |         xx.xx       |  
+| AMP - 1080 Ti|      xx.xx    |     6615MB     |         xx.xx       |  
 | AMP - 2080 Ti|      xx.xx    |      xx.xx     |         xx.xx       |  
 
 ### 4. Code Reference
