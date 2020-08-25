@@ -8,7 +8,8 @@ Automatic Mixed Precision Tutorials using pytorch. Based on [PyTorch 1.6 Officia
 
 - author: hoya012  
 - last update: 2020.08.25
-- [supplementary materials (blog post written in Korean)](https://hoya012.github.io/blog/Mixed-Precision-Training/)
+- [supplementary materials 1 (blog post written in Korean)](https://hoya012.github.io/blog/Mixed-Precision-Training/)
+- [supplementary materials 2 (blog post written in Korean)](https://hoya012.github.io/blog/Image-Classification-with-Mixed-Precision-Training-PyTorch-Tutorial/)
 
 ## 0. Experimental Setup (I used 1 GTX 1080 Ti GPU and 1 RTX 2080 Ti GPU!)
 ### 0-1. Prepare Library
