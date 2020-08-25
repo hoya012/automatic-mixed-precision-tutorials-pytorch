@@ -30,11 +30,17 @@ This Data contains around 25k images of size 150x150 distributed under 6 categor
 'sea' -> 4,
 'street' -> 5 }
 
+- Make `data` folder and move dataset into `data` folder.
+
+<p align="center">
+  <img width="1200" src="/assets/data_folder.PNG">
+</p>
+
 ### 1. Baseline Training 
 - ImageNet Pretrained ResNet-18 from torchvision.models
 - Batch Size 256 / Epochs 120 / Initial Learning Rate 0.0001
 - Training Augmentation: Resize((256, 256)), RandomHorizontalFlip()
-- Adam + Cosine Learning rate schedueling with warmup
+- Adam + Cosine Learning rate scheduling with warmup
 - I tried NVIDIA Pascal GPU - GTX 1080 Ti 1 GPU (w/o Tensor Core) and NVIDIA Turing GPU - RTX 2080 Ti 1 GPU (with Tensor Core)
 
 ```python
