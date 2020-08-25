@@ -79,10 +79,10 @@ python main.py --checkpoint_name baseline_amp --amp;
 
 |   Algorithm  | Test Accuracy |   GPU Memory   | Total Training Time |
 |:------------:|:-------------:|:--------------:|:-------------------:|
-|  B - 1080 Ti |      xx.xx    |     10737MB    |         xx.xx       |    
-|  B - 2080 Ti |      xx.xx    |      xx.xx     |         xx.xx       |    
-| AMP - 1080 Ti|      xx.xx    |     6615MB     |         xx.xx       |  
-| AMP - 2080 Ti|      xx.xx    |      xx.xx     |         xx.xx       |  
+|  B - 1080 Ti |      94.13    |     10737MB    |         64.9m       |    
+|  B - 2080 Ti |      94.17    |     10855MB    |         54.3m       |    
+| AMP - 1080 Ti|      94.07    |     6615MB     |         64.7m       |  
+| AMP - 2080 Ti|      94.23    |     7799MB     |         37.3m       |  
 
 ### 4. Code Reference
 - Baseline Code: https://github.com/hoya012/carrier-of-tricks-for-classification-pytorch
