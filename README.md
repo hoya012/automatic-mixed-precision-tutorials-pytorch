@@ -7,7 +7,7 @@
 Automatic Mixed Precision Tutorials using pytorch. Based on [PyTorch 1.6 Official Features (Automatic Mixed Precision)](https://pytorch.org/docs/stable/notes/amp_examples.html), implement classification codebase using custom dataset.
 
 - author: hoya012  
-- last update: 2020.08.25
+- last update: 2020.09.03
 - [supplementary materials 1 (blog post written in Korean)](https://hoya012.github.io/blog/Mixed-Precision-Training/)
 - [supplementary materials 2 (blog post written in Korean)](https://hoya012.github.io/blog/Image-Classification-with-Mixed-Precision-Training-PyTorch-Tutorial/)
 
