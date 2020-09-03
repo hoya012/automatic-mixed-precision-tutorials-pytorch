@@ -50,7 +50,20 @@ python main.py --checkpoint_name baseline;
 
 ### 2. Automatic Mixed Precision Training 
 
-In PyTorch 1.6, Automatic Mixed Precision Training is very easy to use! Thanks to PyTorch..
+In PyTorch 1.6, Automatic Mixed Precision Training is very easy to use! Thanks to PyTorch!
+
+#### 2.1 Before
+```python
+for batch_idx, (inputs, labels) in enumerate(data_loader):
+  self.optimizer.zero_grad()
+
+  outputs = self.model(inputs)
+  loss = self.criterion(outputs, labels)
+
+  loss.backward()
+  self.optimizer.step()
+```
+#### 2.2 After (just add 5 lines)
 
 ```python
 """ define loss scaler for automatic mixed precision """
@@ -75,7 +88,7 @@ for batch_idx, (inputs, labels) in enumerate(data_loader):
   self.scaler.update()
 ```
 
-#### Run Script (Command Line)
+#### 2.3 Run Script (Command Line)
 ```python
 python main.py --checkpoint_name baseline_amp --amp;
 ```
